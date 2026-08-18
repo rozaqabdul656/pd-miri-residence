@@ -15,6 +15,7 @@ export function VideoGallery({
   title: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [playRequested, setPlayRequested] = useState(false);
   const activeVideo = videos[activeIndex];
 
   if (!activeVideo) return null;
@@ -23,16 +24,37 @@ export function VideoGallery({
     <div className="overflow-hidden rounded-[1.75rem] bg-forest text-paper shadow-[0_24px_60px_rgba(23,61,50,0.18)]">
       <div className="grid lg:grid-cols-[1fr_280px]">
         <div className="bg-black">
-          <div className="aspect-video">
+          <div className="relative mx-auto aspect-[9/16] w-full max-w-[430px] sm:aspect-video sm:max-w-none">
             <iframe
-              key={activeVideo.id}
+              key={`${activeVideo.id}-${playRequested ? "play" : "preview"}`}
               className="h-full w-full border-0"
-              src={`https://drive.google.com/file/d/${activeVideo.id}/preview`}
+              src={`https://drive.google.com/file/d/${activeVideo.id}/preview${playRequested ? "?autoplay=1" : ""}`}
               title={`${title} — ${activeVideo.title}`}
               loading="lazy"
               allow="autoplay; encrypted-media"
               allowFullScreen
             />
+            {!playRequested && (
+              <button
+                type="button"
+                aria-label={`Putar ${activeVideo.title}`}
+                onClick={() => setPlayRequested(true)}
+                className="absolute inset-0 z-10 grid place-items-center sm:hidden"
+              >
+                <span className="grid size-16 place-items-center rounded-2xl bg-black/85 text-white shadow-xl">
+                  <Play size={26} fill="currentColor" />
+                </span>
+              </button>
+            )}
+            <a
+              href={`https://drive.google.com/file/d/${activeVideo.id}/view`}
+              target="_blank"
+              rel="noreferrer"
+              className="absolute top-3 right-3 z-20 inline-flex items-center gap-1.5 rounded-full bg-black/75 px-3 py-2 text-xs font-semibold text-white shadow-lg sm:hidden"
+            >
+              Buka video
+              <ExternalLink size={13} />
+            </a>
           </div>
         </div>
 
@@ -57,7 +79,10 @@ export function VideoGallery({
                 <button
                   key={video.id}
                   type="button"
-                  onClick={() => setActiveIndex(index)}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    setPlayRequested(false);
+                  }}
                   aria-pressed={active}
                   className={`flex items-center gap-3 rounded-xl px-3 py-3 text-left transition ${
                     active
