@@ -6,5 +6,13 @@
     "description": "Kerja bakti warga akan dilaksanakan pada 2 Agustus 2026. Mari ikut berpartisipasi menjaga kebersihan dan kenyamanan lingkungan Pondok Miri Residence.",
     "important": true,
     "active": true
+  },
+    {
+    "id": "fogging-nyamuk-13-september-2026",
+    "title": "Fogging Nyamuk",
+    "date": "2026-09-13",
+    "description": "Fogging nyamuk akan dilaksanakan pada 13 September 2026. Diharapkan seluruh warga melakukan persiapan dengan menutup alat makan dan minuman serta menyingkirkan hewan peliharaan dari area yang akan difogging.",
+    "important": true,
+    "active": true
   }
 ]
