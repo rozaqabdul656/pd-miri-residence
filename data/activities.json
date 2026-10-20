@@ -1,5 +1,37 @@
 [
   {
+    "id": "fogging-2026",
+    "slug": "fogging-lingkungan-2026",
+    "title": "Fogging Lingkungan 2026",
+    "date": "2026-09-12",
+    "year": 2026,
+    "category": "Kesehatan Lingkungan",
+    "shortDescription": "Kegiatan fogging untuk membantu menjaga kebersihan dan kenyamanan lingkungan Pondok Miri Residence.",
+    "description": "Dokumentasi kegiatan fogging lingkungan Pondok Miri Residence yang dilaksanakan untuk membantu mengendalikan nyamuk dan menjaga kenyamanan warga.",
+    "location": "Pondok Miri Residence",
+    "cover": "/images/activities/2026/fogging/foto-1.jpg",
+    "featured": false,
+    "videos": [
+      {
+        "id": "1Pw9REOB_c6BJ1b3A-bGCb_OhzqesR5QY",
+        "title": "IMG_4593.MOV",
+        "src": "/videos/fogging-2026/img_4593.mp4",
+        "folderUrl": "https://drive.google.com/drive/folders/16vertabfQzwSliBuJeJOrwuUZhepoQqv"
+      }
+    ],
+    "images": [
+      "/images/activities/2026/fogging/foto-2.jpg",
+      "/images/activities/2026/fogging/foto-3.jpg",
+      "/images/activities/2026/fogging/foto-4.jpg",
+      "/images/activities/2026/fogging/foto-5.jpg",
+      "/images/activities/2026/fogging/foto-6.jpg",
+      "/images/activities/2026/fogging/foto-7.jpg",
+      "/images/activities/2026/fogging/foto-8.jpg",
+      "/images/activities/2026/fogging/foto-9.jpg",
+      "/images/activities/2026/fogging/foto-10.jpg"
+    ]
+  },
+  {
     "id": "hut-ri-2026",
     "slug": "perayaan-hut-ri-2026",
     "title": "Agustusan Pondok Miri 2026",
