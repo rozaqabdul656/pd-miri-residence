@@ -11,7 +11,7 @@ import {
 import { useRef, useState } from "react";
 import type { ActivityVideo } from "@/types";
 
-const driveFolderUrl =
+const defaultDriveFolderUrl =
   "https://drive.google.com/drive/folders/1pjNSqGZrwyrQ4qkU3987XOofgmhVipYD?usp=sharing";
 
 function formatTime(seconds: number) {
@@ -274,7 +274,7 @@ export function VideoGallery({
           </div>
 
           <a
-            href={driveFolderUrl}
+            href={activeVideo.folderUrl ?? defaultDriveFolderUrl}
             target="_blank"
             rel="noreferrer"
             className="m-4 mt-2 inline-flex items-center justify-center gap-2 rounded-full border border-paper/20 px-4 py-2.5 text-xs font-semibold text-paper/80 transition hover:bg-paper/10 hover:text-paper"
